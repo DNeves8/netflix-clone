@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/netflix.png">
+            </div>
+            <div class="nav-right">
+                <div class="lang-select">
+                  <img class="lingua" src="img/lingua.png">
+                    <select>
+                        <option value="lang-1">Português</option>
+                        <option value="lang-2">Inglês</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <a href="login.html" class="btn">Entrar</a>
+            </div>
+        </nav>
+        <div class="black-box">
+        </div>
+        <main>
+            <h1>Filmes, séries e muito<br> mais, sem limites</h1>
+            <h2>A partir de R$ 20,90. Cancele quando quiser.</h2>
+            <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.
+            </p>
+            <div class="inputs-container">
+                <input type="email" placeholder="Email">
+                <button>Vamos lá&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+    <section class="top-trending">
+        <div class="trending-content">
+            <h1>Em alta</h1>
+            <div class="cards-section">
+                <button class="scroll-button scroll-left" onclick="scrollCards('left')"><i
+                        class="fa-solid fa-chevron-left"></i></button>
+                <button class="scroll-button scroll-right" onclick="scrollCards('right')"><i
+                        class="fa-solid fa-chevron-right"></i></button>
+                <div class="cards">
+                    <span class="card-container">
+                        <span>1</span>
+                        <img src="img/você.webp">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>2</span>
+                        <img src="img/sangue.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>3</span>
+                        <img src="img/jogododado.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>4</span>
+                        <img src="img/despercebida.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>5</span>
+                        <img src="img/breta.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>6</span>
+                        <img src="img/gostinho.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>7</span>
+                        <img src="img/hater.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>8</span>
+                        <img src="img/influencia.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>9</span>
+                        <img src="img/cocomelon.jpg">
+                    </span>&nbsp; &nbsp;
+                    <span class="card-container">
+                        <span>10</span>
+                        <img src="img/ldr.jpg">
+                    </span>
+                </div>
+            </div>
+    </section>
+
+    <section class="reasons-section">
+        <h2 class="reasons-title">Mais motivos para assinar</h2>
+
+        <div class="reason-cards">
+            <div class="reason">
+                <h3>Aproveite na TV</h3>
+                <p>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros
+                    dispositivos.</p>
+                <img class="tv" src="img/tv.png">
+            </div>
+
+            <div class="reason">
+                <h3>Baixe séries para assistir offline</h3>
+                <p>Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
+               <img class="seta" src="img/seta.png">
+            </div>
+
+            <div class="reason">
+                <h3>Assista onde quiser</h3>
+                <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
+                <img class="luneta" src="img/luneta.png">
+            </div>
+
+            <div class="reason">
+                <h3>Crie perfis para crianças</h3>
+                <p>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem
+                    pagar a mais por isso.</p>
+                <img class="contas" src="img/contas.webp">
+            </div>
+        </div>
+
+
+    </section>
+    <section>
+        <h1 class="pf">Perguntas frequentes</h1>
+        <div class="faq">
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>O que é a Netflix?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>
+                        A Netflix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e
+                        documentários premiados
+                        em milhares de aparelhos conectados à internet.<br><br> Você pode assistir a quantos filmes
+                        e séries quiser, quando e
+                        onde quiser - tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A
+                        cada semana,
+                        adicionamos novas séries e filmes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>Quanto custa a Netflix?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma
+                        taxa mensal única. Os planos variam de R$ 20,90 a R$ 59,90 por mês. Sem contrato nem taxas
+                        extras.</p>
+                </div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>Onde posso assistir?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>Assista onde quiser, quando quiser. Acesse sua conta Netflix em netflix.com para assistir no
+                        computador ou em qualquer aparelho conectado à internet compatível com o aplicativo Netflix,
+                        como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.
+                        <br><br>
+                        Você também pode baixar suas séries favoritas com o aplicativo Netflix para iOS ou Android.
+                        Use os downloads para levar a Netflix para onde quiser sem precisar de conexão com a
+                        internet. Leve a Netflix com você para qualquer lugar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>Como faço para cancelar?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na
+                        internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou
+                        encerrar a sua assinatura a qualquer momento.</p>
+                </div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>O que eu posso assistir na Netflix?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix
+                        premiados e muito mais. Assista o quanto quiser, quando quiser.</p>
+                </div>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <p>A Netflix é adequada para crianças?</p>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-item">
+                    <p>A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se
+                        divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos
+                        responsáveis.
+                        <br><br>
+                        O recurso de controle parental, incluso nos perfis para crianças e protegido por PIN,
+                        permite restringir a classificação etária do conteúdo que as crianças podem ver e bloquear
+                        títulos específicos que você não quer que elas assistam.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-section">
+            <div class="input-section">
+                <p>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
+                <div class="inputs-container">
+                    <input id="email" type="email" placeholder="Email">
+                    <button>Vamos lá&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="links-section">
+                <div class="number">
+                    <p>Dúvidas? Ligue para <a href="tel:0800 591 2876">0800 591 2876</a></p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="">Perguntas frequentes</a></li>
+                        <li><a href="">Relações com investidores</a></li>
+                        <li><a href="">Formas de assistir</a></li>
+                        <li><a href="">Informações corporativas</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Central de Ajuda</a></li>
+                        <li><a href="">Carreiras</a></li>
+                        <li><a href="">Termos de Uso</a></li>
+                        <li><a href="">Entre em contato</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Conta</a></li>
+                        <li><a href="">Resgatar cartão pré-pago</a></li>
+                        <li><a href="">Privacidade</a></li>
+                        <li><a href="">Teste de velocidade</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Media Center</a></li>
+                        <li><a href="">Preferências de cookies</a></li>
+                        <li><a href="avisos.html">Avisos legais</a></li>
+                    </ul>
+                </div>
+                <div id="bottom-lang" class="lang-select">
+                   <img class="lingua" src="img/lingua.png">
+                    <select>
+                        <option value="lang-1">Português</option>
+                        <option value="lang-2">Inglês</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+
+            </div>
+            <span>
+                <p>Netflix Brasil</p>
+            </span>
+        </div>
+
+    </footer>
+    <script>
+        const cardsContainer = document.querySelector('.cards');
+        const leftButton = document.querySelector('.scroll-left');
+        const rightButton = document.querySelector('.scroll-right');
+
+        function updateScrollButtons() {
+            const scrollLeft = cardsContainer.scrollLeft;
+            const scrollWidth = cardsContainer.scrollWidth;
+            const clientWidth = cardsContainer.clientWidth;
+
+            leftButton.style.display = scrollLeft > 0 ? 'block' : 'none';
+            rightButton.style.display = scrollLeft + clientWidth < scrollWidth ? 'block' : 'none';
+        }
+
+        function scrollCards(direction) {
+            const scrollAmount = 1200;
+            if (direction === 'right') {
+                cardsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            } else {
+                cardsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        cardsContainer.addEventListener('scroll', updateScrollButtons);
+        window.addEventListener('load', updateScrollButtons);
+        window.addEventListener('resize', updateScrollButtons);
+
+        document.querySelectorAll('.faq-content').forEach(item => {
+            item.addEventListener('click', () => {
+
+                document.querySelectorAll('.faq-content').forEach(el => {
+                    if (el !== item) el.classList.remove('active');
+                });
+
+                item.classList.toggle('active');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+       <a href="index.html"> <img class="img-logo" src="img/netflix.png">
+  </a>
+
+    <div class="corpo-login">
+        <form>
+            <h2>Entrar</h2>
+            <div class="rotulo-input">
+                <label class="rotulo-email-senha" for="email">Email ou número de telefone</label>
+                <input class="input-email-senha" id="email" type="email" required>
+            </div>
+            <div class="rotulo-input">
+                <label class="rotulo-email-senha" for="password">Senha</label>
+                <input class="input-email-senha" id="password" type="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <p class="ou">OU</p>
+            <button class="botao-codigo" type="submit">Usar um código de acesso</button>
+            <div class="ajuda"><a class="esqueceu" href="#">Esqueceu a senha?</a></div><br>
+            <label>
+                <input id="checkbox" checked class="checkbox" type="checkbox">
+                <span class="texto-lembrar">Lembre-se de mim</span>
+            </label>
+        </form>
+        <footer class="rodape-corpo-login">
+            <span class="link-assinatura">Primeira vez aqui?<a href="#">Assine agora</a>.</span>
+            <p class="texto-captcha">Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um
+                robô. <br><button class="botao-saiba-mais">Saiba
+                    mais.</button></p>
+        </footer>
+    </div>
+    </div>
+    <footer class="rodape">
+        <div class="area-rodape-limitada">
+            <p>Dúvidas? Ligue <a class="link-rodape" href="#">0800 591 2876 (ligação grátis)</a></p>
+            <div class="lista">
+                <ul>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Preferências de cookies</a></li>
+                    <li><a href="#">Informações corporativas</a></li>
+                </ul>
+            </div>
+            <div class="seletor-idioma">
+                <img class="lingua" src="img/lingua.png">
+                <select>
+                    <option value="pt">Português</option>
+                    <option value="en">Inglês</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const input = document.querySelectorAll('.input-email-senha');
+        const label = document.querySelector('.rotulo-email-senha');
+        const botaoSaibaMais = document.querySelector('.botao-saiba-mais');
+        const textoSaibaMais = document.querySelector('.texto-saiba-mais')
+
+        const handleFocus = ({ target }) => {
+            const label = target.previousElementSibling
+            label.classList.add('rotulo-transicao')
+        }
+
+        const handleFocusOut = ({ target }) => {
+            if (target.value == '') {
+                const label = target.previousElementSibling
+                label.classList.remove('rotulo-transicao')
+            }
+        }
+
+        input.forEach((input) => input.addEventListener('focus', handleFocus))
+        input.forEach((input) => input.addEventListener('focusout', handleFocusOut))
+
+        botaoSaibaMais.addEventListener('click', ({ target }) => {
+            textoSaibaMais.style.visibility = 'visible';
+            textoSaibaMais.style.opacity = 1;
+            target.style.visibility = 'hidden'
+        });
+
+        const seletorIdioma = document.querySelector('.seletor-idioma select');
+
+        const translations = {
+            pt: {
+                entrar: 'Entrar',
+                email: 'Email ou número de telefone',
+                senha: 'Senha',
+                ou: 'OU',
+                usarCodigo: 'Usar um código de acesso',
+                lembre: 'Lembre-se de mim',
+                esqueceu: 'Esqueceu a senha?',
+                primeiraVez: 'Primeira vez aqui?',
+                assine: 'Assine agora',
+                captcha: 'Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.',
+                saibaMais: 'Saiba mais.',
+                duvidas: 'Dúvidas? Ligue',
+                perguntas: 'Perguntas frequentes',
+                ajuda: 'Centro de ajuda',
+                termos: 'Termos de uso',
+                privacidade: 'Privacidade',
+                cookies: 'Preferências de cookies',
+                info: 'Informações corporativas'
+            },
+            en: {
+                entrar: 'Sign In',
+                email: 'Email or phone number',
+                senha: 'Password',
+                ou: 'OR',
+                usarCodigo: 'Use an access code',
+                lembre: 'Remember me',
+                esqueceu: 'Forgot password?',
+                primeiraVez: 'First time here?',
+                assine: 'Sign up now',
+                captcha: 'This page is protected by Google reCAPTCHA to ensure you are not a robot.',
+                saibaMais: 'Learn more.',
+                duvidas: 'Questions? Call',
+                perguntas: 'FAQ',
+                ajuda: 'Help Center',
+                termos: 'Terms of Use',
+                privacidade: 'Privacy',
+                cookies: 'Cookie Preferences',
+                info: 'Corporate Information'
+            }
+        };
+
+        function changeLanguage(lang) {
+            const t = translations[lang];
+            document.querySelector('h2').textContent = t.entrar;
+            document.querySelector('label[for="email"]').textContent = t.email;
+            document.querySelector('label[for="password"]').textContent = t.senha;
+            document.querySelector('.ou').textContent = t.ou;
+            document.querySelector('.botao-codigo').textContent = t.usarCodigo;
+            document.querySelector('.rotulo-checkbox').textContent = t.lembre;
+            document.querySelector('.ajuda').textContent = t.esqueceu;
+            document.querySelector('.link-assinatura').innerHTML = `${t.primeiraVez}? <a href="#">${t.assine}</a>.`;
+            document.querySelector('.texto-captcha').innerHTML = `${t.captcha} <br><button class="botao-saiba-mais">${t.saibaMais}</button>`;
+            document.querySelector('.botao-saiba-mais').textContent = t.saibaMais;
+            document.querySelector('.area-rodape-limitada p').innerHTML = `${t.duvidas} <a class="link-rodape" href="#">0800 591 8942 (ligação grátis)</a>`;
+
+            const footerLinks = document.querySelectorAll('.lista ul li a');
+            footerLinks[0].textContent = t.perguntas;
+            footerLinks[1].textContent = t.ajuda;
+            footerLinks[2].textContent = t.termos;
+            footerLinks[3].textContent = t.privacidade;
+            footerLinks[4].textContent = t.cookies;
+            footerLinks[5].textContent = t.info;
+        }
+
+        seletorIdioma.addEventListener('change', () => {
+            const lang = seletorIdioma.value;
+            changeLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>

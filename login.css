@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Netflix Sans","Helvetica Neue","Segoe UI","Roboto","Ubuntu","sans-serif";
+    color: grey;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.562) url("img/netflixfundo.jpg");
+    background-blend-mode: darken;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-logo {
+    margin: 25px 0px 15px 3%;
+    width: 170px;
+}
+
+.corpo-login {
+    background-color: rgba(0, 0, 0, 0.747);
+    margin: 0 auto;
+    height: 700px;
+    padding: 65px 65px 50px 65px;
+    border-radius: 5px;
+    max-width: 450px;
+    width: 90%;
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 28px;
+}
+
+.input-email-senha {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding-top: 12px;
+    font-size: 16px;
+    background-color: transparent;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.input-email-senha:focus {
+    background-color: #454545;
+}
+
+#password {
+    padding-right: 100px;
+}
+
+.rotulo-input {
+    position: relative;
+    width: 100%;
+    background-color: #1f1f1f;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 5px;
+    margin: 12px 0;
+}
+
+.rotulo-email-senha {
+    color: gray;
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: text;    
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+.rotulo-transicao {
+    font-size: 12px;
+    top: 0px;
+    transition: 0.2s;
+}
+
+form button {
+    width: 100%;
+    height: 50px;
+    background-color: #E50A15;
+    border: none;
+    border-radius: 5px;
+    margin-top: 22px;
+    margin-bottom: 13px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ou {
+    text-align: center;
+}
+
+.botao-codigo {
+    background-color: #737373;
+}
+
+.ajuda{
+text-align: center;
+}
+.esqueceu, .texto-lembrar{
+    color: white;
+}
+
+.rodape-formulario {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    align-items: center;
+}
+
+
+.rodape-corpo-login {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.rodape-corpo-login a {
+    color: #0080ff;
+}
+
+.link-assinatura {
+    font-size: 16px;
+}
+
+.link-assinatura a {
+    color: white;
+    margin-left: 3px;
+}
+
+.texto-captcha {
+    margin: 15px 0;
+    font-size: 13px;
+    text-align: left;
+}
+
+.texto-captcha a {
+    color: rgb(0, 60, 255);
+    text-decoration: none;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #161616;
+    height: auto;
+}
+
+.area-rodape-limitada {
+    margin: 0 10px;
+    padding: 25px 0;
+    width: 1000px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+li {
+    display: flex;
+    width: 25%;
+    margin-bottom: 15px;
+}
+
+.lista {
+    margin-top: 30px;
+}
+
+.botao-saiba-mais {
+    color: #0080ff;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.botao-saiba-mais:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer p, a{
+    color: #b8b8b9;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.seletor-idioma {
+    height: 2.2rem;
+    width: 8rem;
+    position: relative;
+}
+
+.seletor-idioma img {
+    color: white;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    pointer-events: none;
+}
+
+.seletor-idioma i {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    pointer-events: none;
+    font-size: 10px;
+}
+
+.seletor-idioma select {
+    background: transparent;
+    color: rgb(255,255,255);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 29px;
+    height: 2rem;
+    width: 8rem;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 4px;
+    appearance: none;
+}
+
+.seletor-idioma select:focus {
+    outline: 2px solid #ffffff;
+}
+
+.seletor-idioma select option {
+    color: black;
+    text-align: left;
+}
